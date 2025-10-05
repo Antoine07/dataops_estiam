@@ -4,7 +4,7 @@ theme: default
 paginate: true
 ---
 
-# Introduction DataOps
+# Introduction au DataOps
 
 L'idée centrale de **DataOps** est de rendre le traitement des données **itératif, automatisé et collaboratif**, exactement comme **l'agilité transforme le développement logiciel** que nous verrons dans ce cours.
 
