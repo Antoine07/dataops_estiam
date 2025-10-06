@@ -21,14 +21,14 @@ size: 16:9
 
 ---
 
-# DataOps — Télécharger Python
+# DataOps — Cours
 
 Cours complet :  
 [https://antoine07.github.io/dataops_estiam/](https://antoine07.github.io/dataops_estiam/)
 
 ---
 
-# Installer Python
+# Télécharger Python
 
 Téléchargez la dernière version :  
 👉 [python.org/downloads](https://www.python.org/downloads/)
