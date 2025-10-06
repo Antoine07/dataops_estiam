@@ -107,9 +107,15 @@ upper_names = [name.upper() for name in names]
 
 ## Exercices 
 
+Nous allons faire quelques exercices, mettez vous dans Jupyter ou un fichier *.py dans vscode ou votre éditeur.
+
+---
+
 ### mississippi
 
 Soit la chaîne de caractères suivante : "mississippi". Comptez le nombre d'occurence de chaque lettre(s).
+
+---
 
 ### Entiers inversés
 
@@ -122,6 +128,8 @@ Par exemples :
 123 donnerait 321
 
 Utilisez les notions du cours pour créer cette fonction. Notamment pensez à caster vos données afin de pouvoir les utiliser avec d'autre(s) fonction(s).
+
+--- 
 
 ### Recherche d'un mot dans un texte
 
