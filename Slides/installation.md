@@ -5,7 +5,23 @@ paginate: true
 size: 16:9
 ---
 
-# DataOps — Installation des outils
+# Stacks
+
+*Lisez bien tout pour choisir une méthode d'installation*
+
+1. **Télécharger Python**
+2. **Environnement virtuel**
+3. **Jupyter & JupyterLab**
+4. **Alternative : Google Colab**
+5. **Approche Docker & Docker Compose**
+6. **Lancement des conteneurs**
+7. **Vérification du setup**
+8. **Panorama des outils DataOps**
+9. **Résumé & lien vers le cours**
+
+---
+
+# DataOps — Télécharger Python
 
 Cours complet :  
 [https://antoine07.github.io/dataops_estiam/](https://antoine07.github.io/dataops_estiam/)
@@ -99,10 +115,10 @@ Assurez-vous qu’il fonctionne avant de continuer.
 **Docker Compose** permet de lancer plusieurs services ensemble.
 Nous allons déployer :
 
-* Jupyter Notebook
-* PostgreSQL
+- Jupyter Notebook
+- PostgreSQL
 
-Les deux seront connectés automatiquement.
+Les deux seront connectés automatiquement, voir le docker compose.
 
 ![w:300](https://docs.docker.com/assets/images/compose-diagram.webp)
 
@@ -142,7 +158,7 @@ Vous devriez voir :
 
 ---
 
-# 📚 Outils utilisés
+#  Outils utilisés
 
 | Catégorie      | Outils                                     | Images                                                                                    |
 | -------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------- |
