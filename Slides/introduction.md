@@ -4,13 +4,13 @@ theme: default
 paginate: true
 ---
 
-![estiam DataOps](./docs/estiam.png)
+![estiam DataOps](./estiam.png)
 
 # Préalable
 
-Pensez à installer vote environnement pour suivre le cours : [installation](./docs/installation.html)
+Pensez à installer vote environnement pour suivre le cours : [installation](./installation.html)
 
-Plan du cours : [plan](./docs/index.html)
+Plan du cours : [plan](./index.html)
 
 # Introduction au DataOps
 
