@@ -16,6 +16,10 @@ Plan du cours : [plan](./index.html)
 
 L'idée centrale de **DataOps** est de rendre le traitement des données **itératif, automatisé et collaboratif**, exactement comme **l'agilité transforme le développement logiciel** que nous verrons dans ce cours.
 
+---
+
+# Concept clé 
+
 **Concept clé :** Combiner **pratiques DevOps**, **gestion des données** et **culture collaborative** pour des pipelines fiables, rapides et reproductibles.
 
 ---
