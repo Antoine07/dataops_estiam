@@ -273,3 +273,15 @@ def load_csv(file_path: str) -> pd.DataFrame:
 
 
 ```
+
+---
+
+# Résumé
+
+1. DataOps = pipelines fiables + itératifs + collaboratifs
+
+1. Agile + DevOps + qualité des données
+
+1. Documentation automatique et centralisée
+
+1. Feedback continu pour amélioration des pipelines

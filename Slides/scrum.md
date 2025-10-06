@@ -12,7 +12,7 @@ L'**Agilité** repose sur le **Manifeste Agile (2001)**, qui défend :
 * **Les individus** et **leurs interactions** > les processus et outils  
 * Le **logiciel fonctionnel** > la documentation exhaustive  
 * La **collaboration avec le client** > la négociation contractuelle  
-* L’**adaptation au changement** > le suivi d’un plan  
+* L'**adaptation au changement** > le suivi d'un plan  
 
 🎯 Livrer **vite, souvent et mieux**, en restant **flexible** face au changement.
 
@@ -21,21 +21,21 @@ L'**Agilité** repose sur le **Manifeste Agile (2001)**, qui défend :
 #  Scrum — Le cadre agile le plus utilisé
 
 **Scrum** est un **cadre (framework)**, pas une méthode.  
-Il repose sur la **transparence**, l’**inspection** et l’**adaptation**.
+Il repose sur la **transparence**, l'**inspection** et l'**adaptation**.
 
 ---
 
 ## 👥 Les rôles Scrum
 
-* **Product Owner (PO)** — définit les priorités (*le quoi*)  
-* **Scrum Master** — garantit la méthode (*le comment*)  
+* **Product Owner (PO)** — définit les priorités (*le quoi*), souvent le client ou la personne qui fait "l'interface" avec le client.
+* **Scrum Master** — garantit la méthode (*le comment*), c'est lead du projet.  
 * **Dev Team** — réalise le produit (*le faire*)
 
 ---
 
 ##  Les artefacts
 
-* **Product Backlog** — liste des besoins  
+* **Product Backlog** — liste des besoins (elle va se construire avec les User Stories)
 * **Sprint Backlog** — sélection des tâches pour le sprint  
 * **Incrément** — version livrable du produit
 
@@ -44,7 +44,7 @@ Il repose sur la **transparence**, l’**inspection** et l’**adaptation**.
 ## Les événements (rituels)
 
 1. **Sprint** → période fixe (1 à 4 semaines)  
-2. **Sprint Planning** → définir ce qu’on va faire  
+2. **Sprint Planning** → définir ce qu'on va faire  
 3. **Daily Scrum** → 15 min chaque jour (synchronisation)  
 4. **Sprint Review** → présentation du travail fini  
 5. **Sprint Retrospective** → amélioration continue
@@ -53,20 +53,24 @@ Il repose sur la **transparence**, l’**inspection** et l’**adaptation**.
 
 #  Exemple concret : projet DataOps
 
-> **Projet : Pipeline Data ETL pour analyser les performances d’étudiants**
+> **Projet : Pipeline Data ETL pour analyser les performances d'étudiants**
 
 ---
 
 ## 🧩 User Stories
 
+*Les besoins du client vont s'exprimer à partir des US*
+
 1.  En tant que **data engineer**, je veux **collecter les données depuis Kaggle** pour avoir une source brute.  
-2. En tant qu’**analyste**, je veux **nettoyer et structurer les données** pour générer des statistiques fiables.  
+2. En tant qu'**analyste**, je veux **nettoyer et structurer les données** pour générer des statistiques fiables.  
 3. En tant que **data scientist**, je veux **entraîner un modèle prédictif** pour estimer la réussite.  
 4.  En tant que **responsable**, je veux **voir un tableau de bord clair** pour suivre la performance.
 
 ---
 
 ##  Tâches associées (exemple)
+
+Une US peut se découper en tâche, le principe répartir la charge de travail pour qu'on n'est que de petites tâches à réaliser (quelques heures à une journée).
 
 | User Story | Tâche | Rôle |
 | ----------- | ----- | ---- |
@@ -93,9 +97,11 @@ Durée : 1 semaine
 | US2 | Nettoyage des données | Chloé | 🟡 En cours |
 | US3 | Chargement des données propres | Antoine | 🔴 À faire |
 
+*Kaggle est un site de challenge sur la data IA.*
+
 ---
 
-##  Tableau Scrum simplifié
+##  Tableau Scrum Kanban
 
 ```
 
@@ -118,9 +124,10 @@ Durée : 1 semaine
 * Nettoyage à stabiliser  
 * CI/CD à mettre en place prochainement  
 
+
 ---
 
-# ⚠️ Gestion des problèmes
+#  Gestion des problèmes 
 
 Lors de la **rétrospective** :
 1. Identifier les blocages  
@@ -134,7 +141,7 @@ Lors de la **rétrospective** :
 #  Fin de Sprint : Review & Rétrospective
 
 1. **Sprint Review** → montrer le produit au PO  
-2. **Sprint Retrospective** → discuter entre l’équipe  
+2. **Sprint Retrospective** → discuter entre l'équipe  
 
 > Objectif : améliorer **la manière de travailler**, pas le produit.
 
@@ -142,11 +149,11 @@ Lors de la **rétrospective** :
 
 ##  But de la rétrospective
 
-1. Qu’est-ce qui a bien marché ?  
-2. Qu’est-ce qui a posé problème ?  
+1. Qu'est-ce qui a bien marché ?  
+2. Qu'est-ce qui a posé problème ?  
 3. Que peut-on améliorer ?  
 
-Le **Scrum Master** anime la discussion pour la garder constructive.
+Le **Scrum Master** anime la discussion pour la garder constructive. N'oubliez pas c'est le lead.
 
 ---
 
@@ -162,7 +169,7 @@ Le **Scrum Master** anime la discussion pour la garder constructive.
 
 ##  Exemple DataOps
 
-* ✅ Ce qui a bien marché : détection précoce d’erreurs via tests automatiques  
+* ✅ Ce qui a bien marché : détection précoce d'erreurs via tests automatiques  
 * ⚠️ Problème : échecs fréquents de connexion Kaggle  
 * 🔁 Amélioration : ajouter un *retry automatique*  
 
@@ -170,7 +177,7 @@ Le **Scrum Master** anime la discussion pour la garder constructive.
 
 #  Estimation des difficultés
 
-L’équipe estime collectivement la **complexité** de chaque tâche pour :
+L'équipe estime collectivement la **complexité** de chaque tâche pour :
 - équilibrer le sprint,  
 - anticiper la charge,  
 - suivre la **vélocité**.
@@ -194,12 +201,12 @@ L’équipe estime collectivement la **complexité** de chaque tâche pour :
 
 #  Planning Poker
 
-Méthode d’estimation collective :  
-1. Le PO présente la story  
+Méthode d'estimation collective :  
+1. Le PO présente la story ou la tâche ou la US
 2. Chacun choisit une carte (1, 2, 3, 5, 8…)  
 3. Révélation simultanée  
 4. Discussion et consensus  
-🎯 Pas un vote — une **décision d’équipe**
+🎯 Pas un vote — une **décision d'équipe**
 
 ---
 
@@ -227,10 +234,10 @@ Méthode d’estimation collective :
 
 # ✅ Conclusion
 
-L’agilité, c’est :
+L'agilité, c'est :
 - Collaborer efficacement  
 - Livrer souvent  
-- S’améliorer continuellement  
+- S'améliorer continuellement  
 
 > “Inspecter, adapter, et livrer de la valeur à chaque sprint.” 🚀
 

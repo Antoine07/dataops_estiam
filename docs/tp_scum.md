@@ -1,3 +1,4 @@
+
 ---
 marp: true
 theme: default
@@ -39,9 +40,9 @@ Ce dataset contient des informations sur les étudiants :
 
 On ne vous demande pas de code dans ce TP.
 
-1. Créez un dépôt avec un README.md pour documenter votre travail et documenter votre organisation Scrum, pour se faire récupérez le markdown [model](./tp_scum.md) pour vous aidez à documenter votre méthodologie de travail.
+1. Créez un dépôt avec un README.md pour documenter votre travail.
 
-2. Product Backlogs : créez un projet et les issues dans votre dépôt, aidez-vous des supports vidéos.
+2. Créez un projet et les issues dans votre dépôt, aidez-vous des supports vidéos.
 
 ---
 
