@@ -4,6 +4,13 @@ theme: default
 paginate: true
 ---
 
+![estiam DataOps](../images/estiam.png)
+
+# Préalable
+
+
+Pensez à installer vote environnement pour suivre le cours : [installation](./installation.md)
+
 # Introduction au DataOps
 
 L'idée centrale de **DataOps** est de rendre le traitement des données **itératif, automatisé et collaboratif**, exactement comme **l'agilité transforme le développement logiciel** que nous verrons dans ce cours.

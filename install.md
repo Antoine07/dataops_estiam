@@ -1,5 +1,7 @@
 # Installation des outils pour suivre le cours
 
+Le cours est là https://antoine07.github.io/dataops_estiam/
+
 ## Installer Python 
 
 [python](https://www.python.org/downloads/)
