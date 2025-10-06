@@ -69,6 +69,8 @@ with open("exemple.txt", "r") as f:
 
 ## Contexte
 
+Vous pouvez vous mettre dans votre équipe pour réaliser cet exercice.
+
 Vous travaillez pour une librairie en ligne.  
 Un fichier CSV de commandes vous est transmis : **incomplet, mal formaté et contenant des doublons**.
 
@@ -78,7 +80,10 @@ Votre mission :
 - Hydrater ce modèle à partir des données nettoyées
 - Produire une analyse et des exports finaux
 
+---
+
 ### Fichier d'entrée
+
 `raw_orders.csv`  
 Contient les colonnes :  
 `order_id, customer_name, customer_email, product, quantity, price, date`
@@ -135,9 +140,10 @@ order_id,customer_name,customer_email,product,quantity,price,date
   - Les données nettoyées en `cleaned_orders.json`
   - Les analyses en `report.csv`
   - Les erreurs dans `errors.log`
-  
+
 
 ### Questions
+
 - Comment organiser le code pour séparer nettoyage, hydratation et analyse ?  
 - Quels formats de sortie facilitent la réutilisation des données ?  
 - Quelles limites rencontrez-vous avec cette approche objet ?
