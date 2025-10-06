@@ -116,9 +116,7 @@ Nous allons déployer :
 - Jupyter Notebook
 - PostgreSQL
 
-Les deux seront connectés automatiquement, voir le docker compose.
-
-![w:300](https://docs.docker.com/assets/images/compose-diagram.webp)
+Les deux seront connectés automatiquement, voir le docker compose
 
 ---
 
