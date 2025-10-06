@@ -9,7 +9,7 @@ paginate: true
 # Préalable
 
 
-Pensez à installer vote environnement pour suivre le cours : [installation](./installation.md)
+Pensez à installer vote environnement pour suivre le cours : [installation](./installation.html)
 
 # Introduction au DataOps
 
