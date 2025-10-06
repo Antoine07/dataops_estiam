@@ -80,8 +80,6 @@ Pour sortir :
 deactivate
 ```
 
-
-
 ---
 
 #  En cas de problème d'installation 

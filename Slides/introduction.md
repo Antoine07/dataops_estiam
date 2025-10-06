@@ -10,6 +10,11 @@ paginate: true
 
 Pensez à installer vote environnement pour suivre le cours : [installation](./installation.html)
 
+Plan du cours 
+
+1. Méthode Scrum rappel [scrum méthode Agile](./scrum.html)
+2.TP [TP méthode Agile](./tp_scrum.html)
+
 # Introduction au DataOps
 
 L'idée centrale de **DataOps** est de rendre le traitement des données **itératif, automatisé et collaboratif**, exactement comme **l'agilité transforme le développement logiciel** que nous verrons dans ce cours.
