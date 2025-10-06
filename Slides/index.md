@@ -7,8 +7,6 @@ paginate: true
 
 # Plan du cours
 
-![estiam DataOps](./docs/estiam.png)
-
 1. [Introduction aux concepts DataOps](./docs/introduction.html)
 2. [Rappel sur la méthodologie Scrum](./docs/scrum.html)
     2. [TP](./docs/tp_scum.html)
@@ -19,5 +17,5 @@ paginate: true
     3.4 [introduction à Pandas](./docs/introduction_pandas.html)
 4. [ETL](./docs/etl.html)
     4.1 [TP](./docs/tp_etl.html)
-5. Github Action pipelime
+5. [Github Action pipelime](./docs/githubaction.html)
 6. Projet
