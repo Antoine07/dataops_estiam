@@ -93,9 +93,6 @@ Tout se fait **dans GitHub**, en suivant les vidéos disponibles dans votre équ
 
 Chaque équipe identifie les **User Stories (US)** du sprint.
 
-| ID | User Story | Priorité |
-|----|-------------|----------|
-
 
 ---
 
@@ -103,18 +100,12 @@ Chaque équipe identifie les **User Stories (US)** du sprint.
 
 Pour chaque User Story, détaillez les **tâches techniques**.
 
-| Tâches | Description |
-|--------|--------------|
-
 
 ---
 
 ## Étape 5 — Estimation (Story Points)
 
 Estimez la **complexité** de chaque tâche avec les **Story Points**.
-
-| Points | Signification |
-| ------- | -------------- |
 
 
 > 📐 Basé sur la **suite de Fibonacci**  

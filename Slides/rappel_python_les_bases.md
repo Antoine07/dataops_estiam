@@ -107,11 +107,32 @@ upper_names = [name.upper() for name in names]
 
 ## Exercices 
 
-1. Variable globale `count = 0`. Fonction qui ajoute 1 et affiche.
-2. Liste `nums = [1,2,3,4,5]` : ajoute 6, supprime 2, affiche 3 premiers éléments
-3. Tuple `t = (1, 2, 3)` : essaie de changer `t[0]`
-4. Dictionnaire `d` avec 3 clés/valeurs : affiche valeur clé `"b"`
-5. Set `s` avec 1,2,2,3,3,3 : affiche-le
-6. List comprehension : carrés des nombres pairs 0-10
-7. Liste `words = ["python","code"]` → mots en majuscules
+### mississippi
 
+Soit la chaîne de caractères suivante : "mississippi". Comptez le nombre d'occurence de chaque lettre(s).
+
+### Entiers inversés
+
+Nous souhaitons créer une fonction qui permet d'inverser des entiers signés ou non :
+
+Par exemples :
+
+-6523 donnerait -3256 
+
+123 donnerait 321
+
+Utilisez les notions du cours pour créer cette fonction. Notamment pensez à caster vos données afin de pouvoir les utiliser avec d'autre(s) fonction(s).
+
+### Recherche d'un mot dans un texte
+
+Un problème récurrent en analyse de données consiste à rechercher une séquence de valeur dans un tableau.
+
+Ci-dessous on cherche la séquence  `123`
+
+```python
+l = [1,3,7,8,9,1,2,3,8, 1, 2, 3, 7, 8, 9, 1, 2, 3, 8, 10, 1, 2, 3]
+```
+
+1. Créez une fonction qui permette de rechercher un mot dans un texte ou une liste, notez que cette fonction sera identique pour un texte, un itérable... Il serait intéressant que cette fonction retourne le premier indice de la position de la séquence trouvée dans la liste. 
+
+2. Retournez maintenant tous les indices de toutes les séquences trouvées dans la liste.
