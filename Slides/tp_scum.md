@@ -81,11 +81,7 @@ Tout se fait **dans GitHub**, en suivant les vidéos disponibles dans votre équ
 
 | Rôle | Responsabilité principale |
 | ---- | -------------------------- |
-| **Product Owner** | Définit la vision et les priorités |
-| **Scrum Master** | Facilite la méthode et les rituels |
-| **Data Engineer(s)** | Préparent les données et pipelines |
-| **Data Analyst** | Analyse les résultats |
-| **Data Scientist (optionnel)** | Modélisation et prévisions |
+
 
 ---
 
@@ -99,9 +95,7 @@ Chaque équipe identifie les **User Stories (US)** du sprint.
 
 | ID | User Story | Priorité |
 |----|-------------|----------|
-| US1 | En tant que *Data Engineer*, je veux **automatiser le téléchargement Kaggle** pour standardiser la collecte. | Haute |
-| US2 | En tant que *Analyste*, je veux **nettoyer les données** pour éviter les valeurs manquantes. | Moyenne |
-| US3 | En tant que *Data Engineer*, je veux **charger les données dans PostgreSQL** pour les centraliser. | Haute |
+
 
 ---
 
@@ -111,9 +105,7 @@ Pour chaque User Story, détaillez les **tâches techniques**.
 
 | Tâches | Description |
 |--------|--------------|
-| Configurer la clé Kaggle | Permet d'accéder à l'API Kaggle. |
-| Écrire `extract_from_kaggle()` | Télécharge le dataset brut. |
-| Créer la table PostgreSQL | Structure la base pour accueillir les données. |
+
 
 ---
 
@@ -123,11 +115,7 @@ Estimez la **complexité** de chaque tâche avec les **Story Points**.
 
 | Points | Signification |
 | ------- | -------------- |
-| 1 | Très simple |
-| 2 | Simple |
-| 3 | Moyenne |
-| 5 | Complexe |
-| 8 | Très complexe |
+
 
 > 📐 Basé sur la **suite de Fibonacci**  
 > (1, 2, 3, 5, 8…)
@@ -146,9 +134,7 @@ Estimez la **complexité** de chaque tâche avec les **Story Points**.
 
 | Tâche | Responsable | Estimation | Livrable attendu |
 |-------|--------------|-------------|------------------|
-| Télécharger le dataset Kaggle | Data Engineer | 3 pts | CSV brut téléchargé |
-| Nettoyer les données | Analyste | 2 pts | DataFrame propre |
-| Charger dans PostgreSQL | Data Engineer | 5 pts | Table créée |
+
 
 ---
 
@@ -156,10 +142,7 @@ Estimez la **complexité** de chaque tâche avec les **Story Points**.
 
 | Événement | Objectif | Durée indicative |
 |------------|-----------|------------------|
-| **Sprint Planning** | Définir les priorités et tâches | 1h |
-| **Daily Scrum** | Synchroniser les actions | 10 min |
-| **Sprint Review** | Montrer les livrables | 30 min |
-| **Sprint Retrospective** | Identifier les améliorations | 30 min |
+
 
 ---
 
