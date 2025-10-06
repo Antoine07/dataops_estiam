@@ -8,20 +8,23 @@ size: 16:9
 #  TP : Organiser un Sprint DataOps avec Scrum  
 ## Contexte et données
 
-- Durée du TP : 1h puis correction
-- Par équipe de 5 max voir le fichier dans votre Equipe **E3 Paris Lyon** 
-
-Vous êtes une équipe **Data** dans une entreprise souhaitant **suivre les performances scolaires** des étudiants via un **tableau de bord analytique**.
-
-🎯 Objectif : mettre en place un **pipeline automatisé** pour :
-
-1. Télécharger le dataset depuis Kaggle,  
-2. Nettoyer et transformer les données,  
-3. Charger le dataset dans PostgreSQL.
+-  Durée du TP : 1h puis correction  
+- Par équipe de **5 maximum**  
+- Voir la composition des équipes dans **Teams > E3 Paris Lyon**
 
 ---
 
-##  Le dataset
+#  Objectif
+
+Vous êtes une équipe **Data** dans une entreprise souhaitant **suivre les performances scolaires** des étudiants via un **tableau de bord analytique**.
+
+Votre mission : concevoir **l'organisation Scrum** d'un pipeline automatisé pour :
+
+1. Regardez le dataset depuis **Kaggle**,  
+
+---
+
+# 📊 Le dataset
 
 > **Source :** [Students Performance Dataset](https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset)
 
@@ -31,17 +34,46 @@ Ce dataset contient des informations sur les étudiants :
 - origine ethnique,  
 - niveau parental, etc.
 
-👉 Permet d'analyser les performances et d'identifier des **patterns ou insights**.
+🎯 Objectif analytique : identifier des **patterns** et **insights** sur la réussite scolaire.
 
 ---
 
-## Ce que vous devez faire 
+#  Ce que vous devez faire
 
-On ne vous demande pas de code dans ce TP.
+Aucun code n'est demandé dans ce TP.
 
-1. Créez un dépôt avec un README.md pour documenter votre travail et documenter votre organisation Scrum, pour se faire récupérez le markdown [model](./tp_scum.md) pour vous aidez à documenter votre méthodologie de travail.
+L'objectif est de simuler l'organisation Scrum autour d'un projet DataOps.
 
-2. Product Backlogs : créez un projet et les issues dans votre dépôt, aidez-vous des supports vidéos.
+---
+
+## Étape 1 : Créez votre dépôt GitHub
+
+1. Créez un **nouveau dépôt GitHub** pour votre équipe.(pensez à mettre le lien de ce dépôt dans le tableur dans Teams).
+2. Ajoutez un fichier **`README.md`** décrivant :
+   - Votre projet (contexte et objectifs),
+   - L'organisation de votre équipe (Scrum),
+   - Les rôles attribués à chacun.
+
+ **Astuce :** utilisez le markdown [modèle de documentation](./tp_scum.md) pour vous guider.
+
+ Des vidéos sont là pour vous aider à réaliser les issues et créer un projet.
+
+---
+
+## Étape 2 : Créez votre projet et vos issues
+
+Tout se fait **dans GitHub**, en suivant les vidéos disponibles dans votre équipe **Teams**.
+
+1. Ouvrez l'onglet **Projects** de votre dépôt.  
+2. Créez un **nouveau projet** nommé `Sprint 1 - DataOps`.  
+   - Type recommandé : **Board (Kanban)**  
+   - Colonnes : `To do` → `In progress` → `Done`  
+
+3. Créez des **issues** (une par User Story).  
+   - Le **titre** = le nom de votre **User Story (US)**  
+   - La **description** = le détail de la fonctionnalité, les critères d'acceptation, les tâches.
+
+👉 Chaque issue sera automatiquement placée dans votre **backlog** (“To do”).
 
 ---
 
@@ -49,59 +81,64 @@ On ne vous demande pas de code dans ce TP.
 
 | Rôle | Responsabilité principale |
 | ---- | -------------------------- |
-
-... 
+| **Product Owner** | Définit la vision et les priorités |
+| **Scrum Master** | Facilite la méthode et les rituels |
+| **Data Engineer(s)** | Préparent les données et pipelines |
+| **Data Analyst** | Analyse les résultats |
+| **Data Scientist (optionnel)** | Modélisation et prévisions |
 
 ---
 
-#  Étapes du TP
+# Étapes du TP
 
 ---
 
-##  Étape 1 — Lecture du Backlog
+##  Étape 3 — Lecture du Product Backlog
 
-Chaque équipe identifie les **User Stories (US)** pour le sprint.
+Chaque équipe identifie les **User Stories (US)** du sprint.
 
 | ID | User Story | Priorité |
 |----|-------------|----------|
 | US1 | En tant que *Data Engineer*, je veux **automatiser le téléchargement Kaggle** pour standardiser la collecte. | Haute |
-
-...
+| US2 | En tant que *Analyste*, je veux **nettoyer les données** pour éviter les valeurs manquantes. | Moyenne |
+| US3 | En tant que *Data Engineer*, je veux **charger les données dans PostgreSQL** pour les centraliser. | Haute |
 
 ---
 
-##  Étape 2 — Détail des tâches
+## Étape 4 — Détail des tâches
 
-Pour chaque User Story, identifiez les **tâches techniques**.
+Pour chaque User Story, détaillez les **tâches techniques**.
 
 | Tâches | Description |
 |--------|--------------|
-| Configurer la clé Kaggle | Permet l'accès à l'API pour le téléchargement automatique. |
+| Configurer la clé Kaggle | Permet d'accéder à l'API Kaggle. |
 | Écrire `extract_from_kaggle()` | Télécharge le dataset brut. |
-
-...
+| Créer la table PostgreSQL | Structure la base pour accueillir les données. |
 
 ---
 
-##  Étape 3 — Estimation (Story Points)
+## Étape 5 — Estimation (Story Points)
 
-Chaque tâche est estimée selon sa **complexité**.
+Estimez la **complexité** de chaque tâche avec les **Story Points**.
 
 | Points | Signification |
 | ------- | -------------- |
 | 1 | Très simple |
+| 2 | Simple |
+| 3 | Moyenne |
+| 5 | Complexe |
+| 8 | Très complexe |
 
-...
-
-> Basé sur la **suite de Fibonacci**
+> 📐 Basé sur la **suite de Fibonacci**  
+> (1, 2, 3, 5, 8…)
 
 ---
 
-##  Étape 4 — Planification du Sprint
+## Étape 6 — Planification du Sprint
 
-* Sélectionnez les tâches réalisables en **1 sprint (1 semaine)**.  
-* Répartissez-les entre les membres.  
-* Construisez le **Sprint Backlog**.
+- Choisissez les tâches réalisables en **1 sprint (1 semaine)**.  
+- Répartissez les responsabilités.  
+- Construisez le **Sprint Backlog** dans votre projet GitHub.
 
 ---
 
@@ -110,36 +147,41 @@ Chaque tâche est estimée selon sa **complexité**.
 | Tâche | Responsable | Estimation | Livrable attendu |
 |-------|--------------|-------------|------------------|
 | Télécharger le dataset Kaggle | Data Engineer | 3 pts | CSV brut téléchargé |
-
-...
+| Nettoyer les données | Analyste | 2 pts | DataFrame propre |
+| Charger dans PostgreSQL | Data Engineer | 5 pts | Table créée |
 
 ---
 
-## Étape 5 — Événements Scrum à simuler
+##  Étape 7 — Événements Scrum à simuler
 
 | Événement | Objectif | Durée indicative |
 |------------|-----------|------------------|
-| **Sprint Planning** | Définir les priorités et les tâches | 1h |
-
-...
+| **Sprint Planning** | Définir les priorités et tâches | 1h |
+| **Daily Scrum** | Synchroniser les actions | 10 min |
+| **Sprint Review** | Montrer les livrables | 30 min |
+| **Sprint Retrospective** | Identifier les améliorations | 30 min |
 
 ---
 
-##  Étape 6 — Bilan de Sprint
+##  Étape 8 — Bilan de Sprint
 
-À la fin du Sprint, l'équipe répond :
+À la fin du sprint, répondez ensemble :
 
-1.  Qu'est-ce qui a bien fonctionné ?  
-2.  Qu'est-ce qui aurait pu mieux se passer ?  
-3.  Que va-t-on améliorer pour le prochain Sprint ?
+1. ✅ Qu'est-ce qui a bien fonctionné ?  
+2. ⚠️ Qu'est-ce qui aurait pu mieux se passer ?  
+3. 🚀 Que va-t-on améliorer pour le prochain sprint ?
 
-🎯 Objectif : **amélioration continue** et meilleure collaboration.
+🎯 Objectif : **amélioration continue** et **meilleure collaboration**.
 
 ---
 
 #  Livrables attendus
 
-à complèter 
+1. Un **dépôt GitHub** par équipe contenant :
+   - Un **README.md** clair et structuré  
+   - Un **projet GitHub (Project)** avec backlog, sprint et issues  
+2. Une **documentation Scrum** (markdown)
+3. Une **présentation orale rapide** du fonctionnement de l'équipe  
 
 ---
 
@@ -147,7 +189,4 @@ Chaque tâche est estimée selon sa **complexité**.
 
 Vous aurez simulé **un sprint complet Scrum** appliqué à un **projet DataOps réel**.
 
-> "Inspecter, adapter et livrer de la valeur — même dans la donnée." 
-```
-
----
+> “Inspecter, adapter et livrer de la valeur — même dans la donnée.” 💡
