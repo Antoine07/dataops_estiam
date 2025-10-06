@@ -88,7 +88,6 @@ np.min(arr)
 
 ---
 
-```markdown
 # Indexation et slicing
 
 ```python
