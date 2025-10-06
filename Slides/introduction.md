@@ -4,7 +4,7 @@ theme: default
 paginate: true
 ---
 
-![estiam DataOps](../images/estiam.png)
+![estiam DataOps](./images/estiam.png)
 
 # Préalable
 

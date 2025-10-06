@@ -33,6 +33,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
 <h1 id="installer-jupyter-et-jupyterlab">Installer Jupyter et JupyterLab</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="" style="width:100px;" /></p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">pip install --upgrade pip
 pip install notebook jupyterlab
 </code></pre>
@@ -42,23 +43,22 @@ pip install notebook jupyterlab
 <p>Pour sortir :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">deactivate
 </code></pre>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="" style="width:600px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
 <h1 id="cas-de-probl%C3%A8me">cas de problème</h1>
+<p><img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="" style="width:200px;" /></p>
 <p>Alternative en ligne sans installation :</p>
 <p><a href="https://colab.research.google.com">Google Colab</a></p>
-<p><img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="" style="width:600px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
 <h1 id="installer-docker-desktop">Installer Docker Desktop</h1>
 <p>Téléchargez et installez Docker Desktop :</p>
 <p><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f449.svg" data-marp-twemoji=""/> <a href="https://www.docker.com/products/docker-desktop/">https://www.docker.com/products/docker-desktop/</a></p>
 <p>Assurez-vous qu’il fonctionne avant de continuer.</p>
-<p><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="" style="width:600px;" /></p>
+<p><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="" style="width:300px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="2" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="7" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
-<h1 id="%E2%9A%99%EF%B8%8F-docker-compose"><img class="emoji" draggable="false" alt="⚙️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2699.svg" data-marp-twemoji=""/> Docker Compose</h1>
+<h1 id="docker-compose">Docker Compose</h1>
 <p><strong>Docker Compose</strong> permet de lancer plusieurs services ensemble.<br />
 Nous allons déployer :</p>
 <ul>
@@ -66,57 +66,26 @@ Nous allons déployer :</p>
 <li data-marpit-fragment="2">PostgreSQL</li>
 </ul>
 <p>Les deux seront connectés automatiquement.</p>
-<p><img src="https://docs.docker.com/assets/images/compose-diagram.webp" alt="" style="width:700px;" /></p>
+<p><img src="https://docs.docker.com/assets/images/compose-diagram.webp" alt="" style="width:300px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
 <h1 id="docker-composeyml">docker-compose.yml</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">services:</span>
-  <span class="hljs-attr">jupyter:</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">jupyter/base-notebook:latest</span>
-    <span class="hljs-attr">environment:</span>
-      <span class="hljs-attr">JUPYTER_ENABLE_LAB:</span> <span class="hljs-string">&quot;yes&quot;</span>
-      <span class="hljs-attr">GRANT_SUDO:</span> <span class="hljs-string">&quot;yes&quot;</span>
-      <span class="hljs-attr">PYTHONPATH:</span> <span class="hljs-string">&quot;/home/jovyan/work/src&quot;</span>
-    <span class="hljs-attr">user:</span> <span class="hljs-string">root</span>
-    <span class="hljs-attr">ports:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;8880:8888&quot;</span>
-    <span class="hljs-attr">volumes:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">./project:/home/jovyan/work</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">./project/kaggle.json:/home/jovyan/.config/kaggle/kaggle.json</span>
-    <span class="hljs-attr">command:</span> <span class="hljs-string">&gt;
-      bash -c &quot;
-      chown jovyan /home/jovyan/.config/kaggle/kaggle.json &amp;&amp;
-      chmod 600 /home/jovyan/.config/kaggle/kaggle.json &amp;&amp;
-      pip install -r /home/jovyan/work/config/requirements.txt &amp;&amp;
-      start-notebook.sh --NotebookApp.token=&#x27;&#x27; --NotebookApp.password=&#x27;&#x27;&quot;
-</span>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
-    <span class="hljs-attr">depends_on:</span>
-      <span class="hljs-attr">postgres:</span>
-        <span class="hljs-attr">condition:</span> <span class="hljs-string">service_healthy</span>
-
-  <span class="hljs-attr">postgres:</span>
-    <span class="hljs-attr">image:</span> <span class="hljs-string">postgres:latest</span>
-    <span class="hljs-attr">environment:</span>
-      <span class="hljs-attr">POSTGRES_USER:</span> <span class="hljs-string">user</span>
-      <span class="hljs-attr">POSTGRES_PASSWORD:</span> <span class="hljs-string">password</span>
-      <span class="hljs-attr">POSTGRES_DB:</span> <span class="hljs-string">students</span>
-    <span class="hljs-attr">ports:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;5432:5432&quot;</span>
-    <span class="hljs-attr">volumes:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-string">./pgdata:/var/lib/postgresql/data</span>
-    <span class="hljs-attr">healthcheck:</span>
-      <span class="hljs-attr">test:</span> [<span class="hljs-string">&quot;CMD-SHELL&quot;</span>, <span class="hljs-string">&quot;pg_isready -U user&quot;</span>]
-      <span class="hljs-attr">interval:</span> <span class="hljs-string">10s</span>
-      <span class="hljs-attr">timeout:</span> <span class="hljs-string">5s</span>
-      <span class="hljs-attr">retries:</span> <span class="hljs-number">5</span>
-    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
-</code></pre>
+<p>Récupérez le fichier source <a href="./docker-compose.yaml">docker compose</a></p>
+<ul>
+<li>
+<p>Créez les dossiers suivants</p>
+<ul>
+<li>project</li>
+<li>pgdata</li>
+</ul>
+</li>
+</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
 <h1 id="%E2%96%B6%EF%B8%8F-lancer-les-conteneurs"><img class="emoji" draggable="false" alt="▶️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" data-marp-twemoji=""/> Lancer les conteneurs</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">docker compose up -d
 </code></pre>
-<p><img class="emoji" draggable="false" alt="👉" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f449.svg" data-marp-twemoji=""/> Ouvrez ensuite Jupyter sur <a href="http://localhost:8880">http://localhost:8880</a></p>
+<p>Ouvrez ensuite Jupyter sur <a href="http://localhost:8880">http://localhost:8880</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="2" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="10" style="--paginate:true;--theme:default;" data-marpit-pagination-total="12" data-size="16:9">
 <h1 id="%F0%9F%94%8D-v%C3%A9rifier-les-conteneurs"><img class="emoji" draggable="false" alt="🔍" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f50d.svg" data-marp-twemoji=""/> Vérifier les conteneurs</h1>
