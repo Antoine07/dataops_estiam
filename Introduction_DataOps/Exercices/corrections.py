@@ -19,3 +19,5 @@ print(dico)
 NUMBER = -6523
 
 result = int(str(NUMBER)[::-1]) if NUMBER >= 0 else -int(str(-NUMBER)[::-1])
+
+# 

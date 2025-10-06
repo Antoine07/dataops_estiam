@@ -13,11 +13,7 @@ size: 16:9
 2. **Environnement virtuel**
 3. **Jupyter & JupyterLab**
 4. **Alternative : Google Colab**
-5. **Approche Docker & Docker Compose**
-6. **Lancement des conteneurs**
-7. **Vérification du setup**
-8. **Panorama des outils DataOps**
-9. **Résumé & lien vers le cours**
+5. **Docker**
 
 ---
 
@@ -37,7 +33,7 @@ Téléchargez la dernière version :
 
 ---
 
-#  Créer un environnement virtuel
+# Créer un environnement virtuel
 
 ```bash
 python -m venv env_dataops
@@ -82,71 +78,50 @@ deactivate
 
 ---
 
+# En cas de problème d'installation
 
-#  Approche Docker 
+Alternative en ligne sans installation : [Google Colab](https://colab.research.google.com)
 
-Pour aller plus loin, vous pouvez installer Docker Compose afin de faciliter le déploiement et la scalabilité.
+---
 
-Téléchargez et installez Docker Desktop :
+# Alternative Docker
 
-👉 [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
-
-Assurez-vous qu’il fonctionne avant de continuer.
+Si vous êtes à l'aise avec Docker, vous pouvez suivre cette installation.
+Elle remplace la méthode précédente.
 
 ![w:150](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)
 
 ---
 
-#  Docker Compose
+# Docker
 
-**Docker Compose** permet de lancer plusieurs services ensemble.
-Nous allons déployer :
+Téléchargez et installez Docker Desktop :
+[https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 
-- Jupyter Notebook
-- PostgreSQL
-
-Les deux seront connectés automatiquement, voir le docker compose
+Assurez-vous qu’il fonctionne avant de continuer.
 
 ---
 
-# Fichier d'exemple docker compose
+# Fichier d'exemple Docker Compose
 
-Récupérez le fichier source [docker compose](./docker-compose.yaml)
+Récupérez le fichier source : [docker-compose.yaml](./docker-compose.yaml)
 
-- Créez les dossiers suivants : **project** et **pgdata**
+Créez les dossiers suivants à la racine de votre projet :
+**project** et **pgdata**
 
 ---
 
-# ▶️ Lancer les conteneurs
+# Lancer les conteneurs
 
 ```bash
 docker compose up -d
+docker ps   # vérifier les conteneurs
 ```
 
-Ouvrez ensuite Jupyter sur [http://localhost:8880](http://localhost:8880)
+Vous devriez voir deux conteneurs :
 
----
+* `jupyter` → running
+* `postgres` → healthy
 
-# Vérifier les conteneurs
-
-```bash
-docker ps
-```
-
-Vous devriez voir :
-
-* `jupyter` → running ✅
-* `postgres` → healthy 🟢
-
----
-
-
-#  En cas de problème d'installation 
-
-![w:100](https://colab.research.google.com/img/colab_favicon_256px.png)
-
-Alternative en ligne sans installation Colab :
-
-[Google Colab](https://colab.research.google.com)
-
+Ouvrez ensuite Jupyter sur : [http://localhost:8880](http://localhost:8880)
 
