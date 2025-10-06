@@ -4,10 +4,9 @@ theme: default
 paginate: true
 ---
 
-![estiam DataOps](./images/estiam.png)
+![estiam DataOps](./estiam.png)
 
 # Préalable
-
 
 Pensez à installer vote environnement pour suivre le cours : [installation](./installation.html)
 

@@ -68,11 +68,11 @@ deactivate
 
 ---
 
-#  cas de problème
+#  En cas de problème d'installation 
 
 ![w:200](https://colab.research.google.com/img/colab_favicon_256px.png)
 
-Alternative en ligne sans installation :
+Alternative en ligne sans installation Colab :
 
 [Google Colab](https://colab.research.google.com)
 
@@ -80,7 +80,9 @@ Alternative en ligne sans installation :
 
 ---
 
-#  Installer Docker Desktop
+#  Approche Docker 
+
+Pour aller plus loin, vous pouvez installer Docker Compose afin de faciliter le déploiement et la scalabilité.
 
 Téléchargez et installez Docker Desktop :
 
