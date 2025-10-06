@@ -1,0 +1,11 @@
+[MASTER]
+# Ne pas chercher des fichiers de config ailleurs
+ignore=.venv,env
+
+[MESSAGES CONTROL]
+# Désactiver les warnings sur les noms de variables/fonctions/classes
+disable=C0103
+
+[FORMAT]
+# Longueur maximale d'une ligne (optionnel)
+max-line-length=120

@@ -31,7 +31,7 @@ Cours complet :
 # Télécharger Python
 
 Téléchargez la dernière version :  
-👉 [python.org/downloads](https://www.python.org/downloads/)
+[python.org/downloads](https://www.python.org/downloads/)
 
 ![w:600](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
 
@@ -82,17 +82,6 @@ deactivate
 
 ---
 
-#  En cas de problème d'installation 
-
-![w:200](https://colab.research.google.com/img/colab_favicon_256px.png)
-
-Alternative en ligne sans installation Colab :
-
-[Google Colab](https://colab.research.google.com)
-
-
-
----
 
 #  Approche Docker 
 
@@ -104,7 +93,7 @@ Téléchargez et installez Docker Desktop :
 
 Assurez-vous qu’il fonctionne avant de continuer.
 
-![w:300](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)
+![w:150](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)
 
 ---
 
@@ -120,14 +109,11 @@ Les deux seront connectés automatiquement, voir le docker compose
 
 ---
 
-# docker-compose.yml
+# Fichier d'exemple docker compose
 
 Récupérez le fichier source [docker compose](./docker-compose.yaml)
 
-- Créez les dossiers suivants 
-
-    - project
-    - pgdata
+- Créez les dossiers suivants : **project** et **pgdata**
 
 ---
 
@@ -141,7 +127,7 @@ Ouvrez ensuite Jupyter sur [http://localhost:8880](http://localhost:8880)
 
 ---
 
-# 🔍 Vérifier les conteneurs
+# Vérifier les conteneurs
 
 ```bash
 docker ps
@@ -154,28 +140,13 @@ Vous devriez voir :
 
 ---
 
-#  Outils utilisés
 
-| Catégorie      | Outils                                     | Images                                                                                    |
-| -------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| Ingestion      | Pandas, SQLAlchemy, Requests, Kafka-python | ![w:120](https://pandas.pydata.org/static/img/pandas_mark.svg)                            |
-| Orchestration  | Airflow, Prefect, Dagster                  | ![w:120](https://airflow.apache.org/images/airflow_logo.png)                              |
-| Transformation | Pandas, Polars, dbt, PySpark               | ![w:120](https://www.getdbt.com/ui/img/logos/dbt-logo.svg)                                |
-| Qualité        | Great Expectations, Pandera                | ![w:120](https://great-expectations-web-assets.s3.us-east-2.amazonaws.com/logo-long.png)  |
-| Visualisation  | Matplotlib, Plotly, Streamlit, Dash        | ![w:120](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png) |
+#  En cas de problème d'installation 
 
----
+![w:100](https://colab.research.google.com/img/colab_favicon_256px.png)
 
-# Résumé
+Alternative en ligne sans installation Colab :
 
-Vous avez maintenant :
-✅ Python + Jupyter
-✅ Docker + PostgreSQL
-✅ Les outils pour pratiquer le DataOps
+[Google Colab](https://colab.research.google.com)
 
-Suivez le cours ici :
-👉 [https://antoine07.github.io/dataops_estiam/](https://antoine07.github.io/dataops_estiam/)
 
-```
-
----
