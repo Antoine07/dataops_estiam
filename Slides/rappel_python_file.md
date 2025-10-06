@@ -101,7 +101,10 @@ Contient les colonnes :
 2. Supprimez les doublons par `order_id` (gardez la première entrée valide).  
 3. Logguez les erreurs et lignes rejetées dans un fichier `errors.log`.
 
+---
+
 ### Questions
+
 - Quelles fonctions de nettoyage allez-vous créer ?  
 - Comment gérez-vous les champs manquants sans interrompre le script ?  
 - Comment consignez-vous les erreurs pour les auditer ensuite ?
