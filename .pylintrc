@@ -1,11 +1,17 @@
-[MASTER]
-# Ne pas chercher des fichiers de config ailleurs
-ignore=.venv,env
-
-[MESSAGES CONTROL]
-# Désactiver les warnings sur les noms de variables/fonctions/classes
-disable=C0103
-
 [FORMAT]
-# Longueur maximale d'une ligne (optionnel)
+
+# Nombre maximum de caractères par ligne
 max-line-length=120
+
+# Chaîne utilisée pour l'indentation (par défaut, 4 espaces)
+indent-string='    '
+
+# Nombre de lignes vides autorisées entre les fonctions/méthodes dans un module
+# Attention : Pylint ne force pas la valeur, mais vérifie max-module-lines
+max-module-lines=1000
+
+# Nombre de lignes vides maximum à la fin d’un fichier
+max-final-newlines=1
+
+# Nombre de lignes vides maximum entre les classes/fonctions au niveau module
+# Pylint n'a pas d'option pour forcer les lignes vides entre méthodes

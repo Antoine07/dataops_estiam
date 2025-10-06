@@ -16,7 +16,8 @@ paginate: true
     3.1 [Les bases](./rappel_python_les_bases.html)
     3.2 [Les objets](./rappel_python_objet.html)
     3.3 [Les fichiers](./rappel_python_file.html)
-    3.4 [introduction à Pandas](./introduction_pandas.html)
+    3.4 [Numpy](./introduction_numpy.html)
+    3.5 [introduction à Pandas](./introduction_pandas.html)
 
 ---
 

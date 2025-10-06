@@ -91,6 +91,7 @@ print(df.head())  # affiche les 5 premières lignes
 ```python
 print(df["Nom"])       # colonne Nom
 print(df.iloc[0])      # première ligne
+# df.loc[rows, columns]
 print(df.loc[0, "Age"]) # valeur ligne 0, colonne Age
 ```
 
@@ -107,103 +108,6 @@ df.sort_values("Age")        # trier par âge
 
 ---
 
-Parfait ! Je vais te refaire l’exercice **guidé pour débutants** en ajoutant **le filtrage et la sauvegarde** directement dans les étapes, avec indications pas à pas.
-
-
-# Exercice guidé Pandas
-
-## Étape 1 : Créer un DataFrame
-
-**Instructions :**  
-
-1. Crée un dictionnaire Python avec :  
-   - `"Nom"` : liste des noms des étudiants  
-   - `"Age"` : liste de leurs âges  
-   - `"Score"` : liste de leurs notes  
-
-2. Transforme ce dictionnaire en **DataFrame Pandas** avec `pd.DataFrame()`  
-3. Affiche le DataFrame pour vérifier  
-
-**Indice :**
-
-```python
-import pandas as pd
-
-data = {
-   
-}
-
-df = pd.DataFrame(data)
-print(df)
-```
-
----
-
-
-## Étape 2 : Ajouter une colonne
-
-**Instructions :**
-
-* Crée une colonne `"Bonus"` égale à **10% du Score** (`Score * 0.1`)
-* Affiche le DataFrame pour vérifier
-
-**Indice :**
-
-```python
-# créez la colonne en plus
-df["Bonus"] = ...
-print(df)
-```
-
----
-
-## Étape 3 : Filtrer les étudiants
-
-**Instructions :**
-
-* Garde uniquement les étudiants ayant un `Score > 85`
-* Utilise la notation `df[condition]`
-
-**Indice :**
-
-```python
-df_filtered = ... # appliquer le filtre ici 
-print(df_filtered)
-```
-
----
-
-## Étape 4 : Trier les résultats
-
-**Instructions :**
-
-* Trie le DataFrame filtré par la colonne `"Bonus"` en **ordre décroissant**
-* Utilise `sort_values()` avec `ascending=False`
-
-**Indice :**
-
-```python
-...
-print(df_sorted)
-```
-
----
-
-## Étape 5 : Sauvegarder dans un CSV
-
-**Instructions :**
-
-* Sauvegarde le DataFrame final dans un fichier `students_clean.csv`
-* N’inclue pas les index du DataFrame (`index=False`)
-
-**Indice :**
-
-```python
-df_sorted.to_csv("students_clean.csv", index=False)
-```
-
----
-
 ## Quelques commandes pratiques
 
 * `df.head()` → affiche les 5 premières lignes
@@ -211,3 +115,89 @@ df_sorted.to_csv("students_clean.csv", index=False)
 * `df.iloc[0]` → accès à la première ligne
 * `df.loc[0, "Age"]` → accès à une cellule spécifique
 * `df["Score"].mean()` → moyenne de la colonne Score
+
+---
+
+## Glossaire non exhaustif
+
+```
+
+| `pd.read_csv("file.csv")` | Lire un CSV dans un DataFrame |
+| `df.head(n)`              | Afficher les n premières lignes |
+| `df.info()`               | Infos sur le DataFrame (types, NaN) |
+| `df.describe()`           | Statistiques descriptives |
+| `df["col"]`               | Sélection d’une colonne |
+| `df.loc[...]`             | Sélection de lignes/colonnes par étiquette ou condition |
+| `df.iloc[...]`            | Sélection de lignes/colonnes par position |
+| `df.drop_duplicates()`    | Supprimer les doublons |
+| `df.dropna()`             | Supprimer les valeurs manquantes |
+| `df.astype(type)`         | Conversion de type d’une colonne |
+| `df.to_csv("file.csv")`   | Exporter le DataFrame en CSV |
+
+```
+
+---
+
+# TP Pandas
+
+## Contexte
+
+Vous recevez un fichier CSV `orders.csv` contenant les commandes d’une boutique en ligne.
+
+Votre mission :
+- Nettoyer et préparer les données
+- Analyser les commandes
+- Générer des statistiques et des filtres avancés
+
+--- 
+
+## Les données
+
+```txt
+# Jeu de données : `orders.csv`
+
+order_id,customer_name,product,quantity,price,date
+1,Alice,Book A,2,12.5,2024-06-10
+2,Bob,Book B,1,15.0,2024-06-11
+3,Charlie,Book C,3,20.0,2024-06-12
+4,Alice,Book A,2,12.5,2024-06-10
+5,Denis,Book D,0,8.0,2024-06-15
+6,Eve,Book E,1,13.5,2024-06-15
+7,Frank,Book F,4,25.0,2024-06-16
+8,Gina,Book G,1,10.0,2024-06-16
+```
+
+--- 
+
+# Consignes — Lecture et nettoyage
+
+Lire le fichier CSV dans un DataFrame Pandas
+
+Nettoyage des données :
+- Supprimer les lignes où `quantity` <= 0
+- Convertir `price` en float si nécessaire
+- Uniformiser le format de `date` (`YYYY-MM-DD`)
+- Supprimer les doublons
+
+--- 
+
+# Consignes — Hydratation & calculs
+
+Calculs avec NumPy / Pandas :
+- Créer une nouvelle colonne `total` = `quantity * price`
+- Calculer le **chiffre d’affaires total**
+- Trouver la commande la plus chère (`total` max)
+- Filtrer les commandes supérieures à 50 €
+
+--- 
+
+# Consignes — Statistiques & reporting
+
+Statistiques avancées :
+- Moyenne, médiane et écart-type des montants (`total`)
+- Nombre de commandes par client
+- Top 3 des produits les plus vendus
+
+Affichage :
+- Résumer chaque commande avec `customer_name`, `product`, `quantity`, `total`
+- Exporter le DataFrame nettoyé et enrichi en CSV `cleaned_orders.csv`
