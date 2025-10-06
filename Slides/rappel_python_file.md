@@ -131,6 +131,8 @@ order_id,customer_name,customer_email,product,quantity,price,date
    - Ajoutez une méthode de classe `from_dict()` pour créer un objet depuis un dictionnaire.  
 2. Lisez les données nettoyées et **hydratez** vos objets.
 
+---
+
 ### Analyse
 - Calculez :
   - Le chiffre d'affaires total
@@ -141,6 +143,7 @@ order_id,customer_name,customer_email,product,quantity,price,date
   - Les analyses en `report.csv`
   - Les erreurs dans `errors.log`
 
+--- 
 
 ### Questions
 
