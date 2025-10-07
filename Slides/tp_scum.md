@@ -20,7 +20,7 @@ Vous êtes une équipe **Data** dans une entreprise souhaitant **suivre les perf
 
 Votre mission : concevoir **l'organisation Scrum** d'un pipeline automatisé pour :
 
-1. Regardez le dataset depuis **Kaggle**,  
+1. Télécharger (extraire) le dataset depuis **Kaggle**,  
 
 ---
 
@@ -56,7 +56,7 @@ L'objectif est de simuler l'organisation Scrum autour d'un projet DataOps.
 
  **Astuce :** utilisez le markdown [modèle de documentation](./tp_scum.md) pour vous guider.
 
- Des vidéos sont là pour vous aider à réaliser les issues et créer un projet.
+ Des vidéos sont là pour vous aider à réaliser les issues et créer un projet (un projet = spring)
 
 ---
 
