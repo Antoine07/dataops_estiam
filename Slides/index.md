@@ -5,7 +5,7 @@ paginate: true
 ---
 
 
-# Plan du cours
+# Plan
 
 ## Première partie
 
@@ -18,6 +18,7 @@ paginate: true
     3.3 [Les fichiers](./rappel_python_file.html)
     3.4 [Numpy](./introduction_numpy.html)
     3.5 [introduction à Pandas](./introduction_pandas.html)
+    3.6 [introduction au test](./introduction_test.html)
 
 ---
 
