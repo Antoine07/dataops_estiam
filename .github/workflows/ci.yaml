@@ -5,7 +5,7 @@ name: Run Python Tests
 on:
   push:
     branches:
-      - 'main'
+      - 'feature_test'
 
 # Définition des jobs à exécuter
 jobs:
