@@ -4,7 +4,6 @@ theme: default
 paginate: true
 ---
 
-
 # Plan
 
 ## Première partie
@@ -29,4 +28,4 @@ paginate: true
 6. [ETL](./etl.html)
     65.1 [TP](./tp_etl.html)
 
-7. Projet
+7. **Projet**

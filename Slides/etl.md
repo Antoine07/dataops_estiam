@@ -87,4 +87,4 @@ C’est le processus standard pour **préparer et centraliser des données** dan
 
 **Pipeline ETL dans workflow DataOps/Scrum**
 
-<img src="./images/diagramme_ETL.png" alt="diagramme d'activité" width="300"/>
+<img src="./diagramme_ETL.png" alt="diagramme d'activité" width="300"/>
