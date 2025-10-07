@@ -24,7 +24,9 @@ paginate: true
 
 ## Deuxième partie
 
-4. [ETL](./etl.html)
-    4.1 [TP](./tp_etl.html)
-5. [Github Action pipelime](./githubaction.html)
-6. Projet
+4.[introduction ci/cd](./introduction_githubaction.html)
+5. [Github Action pipelime](./introduction_cicd.html)
+6. [ETL](./etl.html)
+    65.1 [TP](./tp_etl.html)
+
+7. Projet
