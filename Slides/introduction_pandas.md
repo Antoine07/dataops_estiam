@@ -138,66 +138,133 @@ df.sort_values("Age")        # trier par âge
 
 ---
 
-# TP Pandas
+## **1. Créer une petite DataFrame**
 
-## Contexte
+```python
+import pandas as pd
 
-Vous recevez un fichier CSV `orders.csv` contenant les commandes d’une boutique en ligne.
+data = {
+    "nom": ["Alice", "Bob", "Clara"],
+    "age": [25, 30, 22],
+    "ville": ["Paris", "Lyon", "Marseille"]
+}
 
-Votre mission :
-- Nettoyer et préparer les données
-- Analyser les commandes
-- Générer des statistiques et des filtres avancés
+df = pd.DataFrame(data)
 
---- 
-
-## Les données
-
-```txt
-# Jeu de données : `orders.csv`
-
-order_id,customer_name,product,quantity,price,date
-1,Alice,Book A,2,12.5,2024-06-10
-2,Bob,Book B,1,15.0,2024-06-11
-3,Charlie,Book C,3,20.0,2024-06-12
-4,Alice,Book A,2,12.5,2024-06-10
-5,Denis,Book D,0,8.0,2024-06-15
-6,Eve,Book E,1,13.5,2024-06-15
-7,Frank,Book F,4,25.0,2024-06-16
-8,Gina,Book G,1,10.0,2024-06-16
+print(df)
+print(df["nom"])   # colonne spécifique
+print(df[["nom", "ville"]])  # plusieurs colonnes
 ```
 
---- 
+---
 
-# Consignes — Lecture et nettoyage
+## **2. Filtrer les personnes de plus de 25 ans**
 
-Lire le fichier CSV dans un DataFrame Pandas
+```python
+filtre = df[df["age"] > 25]
+print(filtre[["nom", "ville"]])
+```
 
-Nettoyage des données :
-- Supprimer les lignes où `quantity` <= 0
-- Convertir `price` en float si nécessaire
-- Uniformiser le format de `date` (`YYYY-MM-DD`)
-- Supprimer les doublons
+---
 
---- 
+## **3. Ajouter une nouvelle colonne**
 
-# Consignes — Hydratation & calculs
+```python
+df["score"] = [12, 15, 9]
+print(df)
 
-Calculs avec NumPy / Pandas :
-- Créer une nouvelle colonne `total` = `quantity * price`
-- Calculer le **chiffre d’affaires total**
-- Trouver la commande la plus chère (`total` max)
-- Filtrer les commandes supérieures à 50 €
+moyenne_score = df["score"].mean()
+print("Moyenne des scores :", moyenne_score)
+```
 
---- 
+---
 
-# Consignes — Statistiques & reporting
+## **4. Filtrer selon plusieurs conditions**
 
-Statistiques avancées :
-- Moyenne, médiane et écart-type des montants (`total`)
-- Nombre de commandes par client
-- Top 3 des produits les plus vendus
+```python
+filtre = df[(df["age"] < 30) & (df["ville"].isin(["Paris", "Marseille"]))]
+print(filtre)
+```
 
-Affichage :
-- Résumer chaque commande avec `customer_name`, `product`, `quantity`, `total`
-- Exporter le DataFrame nettoyé et enrichi en CSV `cleaned_orders.csv`
+---
+
+## **5. Calculer des statistiques**
+
+```python
+data = {
+    "produit": ["A", "B", "C", "D"],
+    "prix": [10, 15, 7, 20],
+    "quantité": [5, 3, 10, 2]
+}
+df = pd.DataFrame(data)
+
+df["total"] = df["prix"] * df["quantité"]
+print(df)
+
+somme_totale = df["total"].sum()
+print("Somme totale des ventes :", somme_totale)
+```
+
+---
+
+## **6. Trier les données**
+
+```python
+tri = df.sort_values(by=["prix", "quantité"], ascending=[True, False])
+print(tri)
+```
+
+---
+
+## **7. Grouper les données**
+
+```python
+ventes = pd.DataFrame({
+    "ville": ["Paris", "Lyon", "Paris", "Marseille", "Lyon"],
+    "produit": ["A", "B", "A", "C", "C"],
+    "montant": [100, 200, 150, 300, 250]
+})
+
+groupes = ventes.groupby("ville")["montant"].sum()
+print(groupes)
+```
+
+---
+
+## **8. Remplacer les valeurs manquantes**
+
+```python
+import numpy as np
+
+notes = pd.DataFrame({
+    "nom": ["Alice", "Bob", "Clara", "David"],
+    "note": [12, np.nan, 15, np.nan]
+})
+
+moyenne = notes["note"].mean()
+notes["note"].fillna(moyenne, inplace=True)
+print(notes)
+```
+
+---
+
+## **9. Mélanger les lignes**
+
+```python
+melange = notes.sample(frac=1, random_state=1)
+print(melange)
+```
+
+---
+
+## **10. Bonus : filtrage logique**
+
+```python
+animaux = pd.DataFrame({
+    "animal": ["chat", "chien", "oiseau", "poisson", "lapin"],
+    "poids": [4, 10, 0.2, 0.1, 2]
+})
+
+filtre = animaux[(animaux["poids"] < 5) & (animaux["animal"].str.contains("a"))]
+print(filtre)
+```

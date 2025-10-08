@@ -54,6 +54,23 @@ pip install notebook jupyterlab
 <p>Pour sortir :</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">deactivate
 </code></pre>
+<h1 id="organisation-de-travail-avec-la-virtualisation">Organisation de travail avec la virtualisation</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-txt">project_data/
+│
+├── env_dataops/          ←  environnement virtuel
+│
+├── requirements.txt      ← liste des dépendances du projet
+├── main.py               ← point d&#x27;entrée principal du programme
+│
+├── mon_projet/           ← dossier du code source (ton “package”)
+│   ├── models/           ← tes classes ou structures de données
+│   │   └── user.py
+│   └── utils/            ← fonctions utilitaires
+│       └── helpers.py
+│
+└── tests/                ← tes fichiers de test
+    └── test_user.py
+</code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--theme:default;" data-marpit-pagination-total="10" data-size="16:9">
 <h1 id="en-cas-de-probl%C3%A8me-dinstallation">En cas de problème d'installation</h1>
@@ -69,7 +86,7 @@ Elle remplace la méthode précédente.</p>
 <h1 id="docker">Docker</h1>
 <p>Téléchargez et installez Docker Desktop :<br />
 <a href="https://www.docker.com/products/docker-desktop/">https://www.docker.com/products/docker-desktop/</a></p>
-<p>Assurez-vous qu’il fonctionne avant de continuer.</p>
+<p>Assurez-vous qu'il fonctionne avant de continuer.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="default" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--theme:default;" data-marpit-pagination-total="10" data-size="16:9">
 <h1 id="fichier-dexemple-docker-compose">Fichier d'exemple Docker Compose</h1>

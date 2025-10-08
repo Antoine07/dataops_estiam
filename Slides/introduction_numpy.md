@@ -160,3 +160,106 @@ january = np.array([-2,  5, -5,  6, -2,  0,  6,  2,  8,  0,  6, -1,  3,  3,  7, 
 
 6. Remplacez maintenant les températures négatives par 
 la moyenne ou la médiane des températures positives.
+
+---
+
+## **1. Remplace les nombres négatifs**
+
+**Consigne :**
+
+```python
+import numpy as np
+a = np.array([-3, 5, -1, 7, -9, 2])
+```
+
+Remplace toutes les valeurs négatives par 0, et affiche le nouveau tableau.
+
+---
+
+## **2. Trouve les indices des nombres pairs**
+
+**Consigne :**
+
+```python
+b = np.array([4, 9, 12, 7, 6, 3, 10])
+```
+
+Trouve les indices (positions) des nombres pairs dans le tableau.
+Indice : utilise `np.where(condition)`.
+
+---
+
+## **3. Crée un damier (échiquier) de 0 et 1**
+
+**Consigne :**
+Crée un tableau 8×8 avec des 0 et 1 alternés comme ceci :
+
+```
+[[0 1 0 1 0 1 0 1]
+ [1 0 1 0 1 0 1 0]
+ [0 1 0 1 0 1 0 1]
+ ...]
+```
+
+Indice : tu peux utiliser `np.zeros((8,8))` et modifier avec du slicing.
+
+---
+
+## **4. Double les valeurs impaires**
+
+**Consigne :**
+
+```python
+c = np.array([1, 2, 3, 4, 5, 6])
+```
+
+Multiplie par 2 uniquement les valeurs impaires. Le reste reste inchangé.
+
+---
+
+## **5. Moyenne des températures supérieures à 20°C**
+
+**Consigne :**
+
+```python
+temperatures = np.array([18, 22, 25, 19, 30, 15, 24])
+```
+
+Calcule la moyenne des températures strictement supérieures à 20°C.
+
+---
+
+## **6. Crée un tableau de 0 à 100, puis filtre**
+
+Crée un tableau de tous les nombres de 0 à 100.
+
+* Garde seulement les multiples de 5.
+* Calcule la somme de ces multiples.
+
+---
+
+## **7. Mélange et retrouve la valeur maximale**
+
+**Consigne :**
+Crée un tableau de 10 nombres aléatoires entre 0 et 100.
+
+* Mélange l’ordre des éléments.
+* Trouve la valeur maximale et son indice.
+
+Indice : `np.random.randint()`, `np.random.shuffle()`, `np.argmax()`.
+
+---
+
+## **8. Normalise un tableau**
+
+**Consigne :**
+
+```python
+data = np.array([10, 20, 30, 40, 50])
+```
+
+Transforme ce tableau pour que les valeurs soient comprises entre 0 et 1 selon la formule :
+
+$$
+x_{norm} = \frac{x - \min(x)}{\max(x) - \min(x)}
+$$

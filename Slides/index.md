@@ -14,7 +14,7 @@ paginate: true
 3. Rappels de Python & Introduction à Pandas
     3.1 [Les bases](./rappel_python_les_bases.html)
     3.2 [Les objets](./rappel_python_objet.html)
-    3.3 [Les fichiers](./rappel_python_file.html)
+    3.3 [Les fichiers](./rappel_python_file.html) (à lire)
     3.4 [Numpy](./introduction_numpy.html)
     3.5 [introduction à Pandas](./introduction_pandas.html)
     3.6 [introduction au test](./introduction_test.html)

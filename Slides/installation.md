@@ -76,6 +76,26 @@ Pour sortir :
 deactivate
 ```
 
+# Organisation de travail avec la virtualisation
+
+```txt
+project_data/
+│
+├── env_dataops/          ←  environnement virtuel
+│
+├── requirements.txt      ← liste des dépendances du projet
+├── main.py               ← point d'entrée principal du programme
+│
+├── mon_projet/           ← dossier du code source (ton “package”)
+│   ├── models/           ← tes classes ou structures de données
+│   │   └── user.py
+│   └── utils/            ← fonctions utilitaires
+│       └── helpers.py
+│
+└── tests/                ← tes fichiers de test
+    └── test_user.py
+```
+
 ---
 
 # En cas de problème d'installation
@@ -98,7 +118,7 @@ Elle remplace la méthode précédente.
 Téléchargez et installez Docker Desktop :
 [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 
-Assurez-vous qu’il fonctionne avant de continuer.
+Assurez-vous qu'il fonctionne avant de continuer.
 
 ---
 
