@@ -40,7 +40,7 @@ Proposition d'organisation
 project_data/
 │
 ├── env_boston/          ←  environnement virtuel
-├── .gitignore             ←  mettre au moins env_dataops
+├── .gitignore             ←  mettre au moins env_boston
 │
 ├── requirements.txt      ← liste des dépendances du projet
 ├── main.py               ← point d'entrée principal du programme
