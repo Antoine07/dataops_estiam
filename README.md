@@ -64,7 +64,7 @@ project_data/
 Récupération des données à partir de l'API Boston Open Data.
 
 ```python
-def extract_boston_salary(url: str) -> pd.DataFrame:
+def extract_boston_salary(url: str):
     """Extrait les données brutes depuis l'API Boston."""
     pass
  
@@ -77,7 +77,7 @@ def extract_boston_salary(url: str) -> pd.DataFrame:
 Nettoyage et typage des données sur la colonne **TOTAL EARNINGS**.
 
 ```python
-def transform(df: pd.DataFrame) -> pd.DataFrame:
+def transform(df: pd.DataFrame):
     """Nettoie et transforme les données de salaires."""
     pass
 
@@ -88,7 +88,7 @@ def transform(df: pd.DataFrame) -> pd.DataFrame:
 Enregistrement des données nettoyées dans un fichier CSV.
 
 ```python
-def load(df: pd.DataFrame, filename: str = "boston_salaries_clean.csv") -> None:
+def load(df: pd.DataFrame, filename: str = "boston_salaries_clean.csv"):
     """Enregistre les données nettoyées dans un fichier CSV."""
     pass
 ```
