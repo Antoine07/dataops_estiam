@@ -4,9 +4,21 @@ theme: default
 paginate: true
 ---
 
-# Introduction DataOps
+![estiam DataOps](./estiam.png)
+
+# Préalable
+
+Pensez à installer vote environnement pour suivre le cours : [installation](./installation.html)
+
+Plan du cours : [plan](./index.html)
+
+# Introduction au DataOps
 
 L'idée centrale de **DataOps** est de rendre le traitement des données **itératif, automatisé et collaboratif**, exactement comme **l'agilité transforme le développement logiciel** que nous verrons dans ce cours.
+
+---
+
+# Concept clé 
 
 **Concept clé :** Combiner **pratiques DevOps**, **gestion des données** et **culture collaborative** pour des pipelines fiables, rapides et reproductibles.
 
@@ -265,3 +277,15 @@ def load_csv(file_path: str) -> pd.DataFrame:
 
 
 ```
+
+---
+
+# Résumé
+
+1. DataOps = pipelines fiables + itératifs + collaboratifs
+
+1. Agile + DevOps + qualité des données
+
+1. Documentation automatique et centralisée
+
+1. Feedback continu pour amélioration des pipelines
