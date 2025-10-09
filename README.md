@@ -39,7 +39,8 @@ Proposition d'organisation
 ```txt
 project_data/
 │
-├── env_dataops/          ←  environnement virtuel
+├── env_boston/          ←  environnement virtuel
+├── .gitignore             ←  mettre au moins env_dataops
 │
 ├── requirements.txt      ← liste des dépendances du projet
 ├── main.py               ← point d'entrée principal du programme
