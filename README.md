@@ -45,7 +45,7 @@ project_data/
 ├── requirements.txt      ← liste des dépendances du projet
 ├── main.py               ← point d'entrée principal du programme
 │
-├── mon_projet/           ← dossier du code source (ton “package”)
+├── etl/           ← dossier du code source (ton “package”)
 │   ├── models/           ← tes classes ou structures de données
 │   │   └── user.py
 │   └── utils/            ← fonctions utilitaires
