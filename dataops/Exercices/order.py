@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 cleaned_data = [
   {"order_id": 1001, "customer": "Alice", "amount": 89.90, "date": "2024-04-05"},
   {"order_id": 1002, "customer": "Bob", "amount": 45.00, "date": "2024-04-07"},
